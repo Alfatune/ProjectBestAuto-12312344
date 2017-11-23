@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Analyzer : Person
+    class Analyzer 
     {
         protected bool AccessCar;
         protected bool AccessBike;
@@ -17,7 +17,7 @@ namespace ConsoleApp1
 
         public void Check(Person z)
         {
-            Console.WriteLine("Процесс анализации...");
+            Console.WriteLine($"{z.Name}, you are suitable for the following vehicles:");
             if (z.MedReference == true & z.DriverLicense == true & z.Age > 18 & z.Age < 80)
             {
                 this.AccessCar = true;
@@ -41,7 +41,7 @@ namespace ConsoleApp1
         }
         public void Info()
         {
-            if (this.AccessCar == true & this.AccessPlane == true & this.AccessMotorBike == true & this.AccessBike == true & this.AccessScooter == true)
+            if (this.AccessCar == true)
             {
                 Console.WriteLine("Car");
             }
